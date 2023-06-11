@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --down-right: (50%, 50%);
+}
+
+body {
+  background: #333;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+.olympiad {
+  color: #fff;
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: auto;
+  margin: 15rem auto;
+  position: relative;
+  width: 100%;
+}
+
+.ring {
+  border-radius: 50%;
+  left: 39%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  width: 100px;
+}
+
+.ring-blue {
+  border: 8px solid #3e76ec;
+  z-index: 0;
+}
+
+.ring-yellow {
+  animation: moveDownRight 1s forwards;
+  border: 8px solid #ffce01;
+  z-index: 1;
+}
+
+.ring-black {
+  animation: moveUpRight 2s forwards;
+  border: 8px solid #000;
+  z-index: 2;
+}
+
+.ring-green {
+  animation: moveDownRightTwice 3s forwards;
+  border: 8px solid #179a13;
+  z-index: 3;
+}
+
+.ring-red {
+  animation: moveUpRightTwice 4s forwards;
+  border: 8px solid #f00;
+  z-index: 4;
+}
+
+@keyframes moveDownRight {
+  100% {
+    transform: translate(60%, 50%);
+  }
+}
+
+@keyframes moveUpRight {
+  50% {
+    transform: translate(60%, 50%);
+  }
+
+  100% {
+    transform: translate(120%, 0);
+  }
+}
+
+@keyframes moveDownRightTwice {
+  33% {
+    transform: translate(60%, 50%);
+  }
+
+  66% {
+    transform: translate(120%, 0);
+  }
+
+  100% {
+    transform: translate(180%, 50%);
+  }
+}
+
+@keyframes moveUpRightTwice {
+  25% {
+    transform: translate(60%, 50%);
+  }
+
+  50% {
+    transform: translate(120%, 0);
+  }
+
+  75% {
+    transform: translate(180%, 50%);
+  }
+
+  100% {
+    transform: translate(240%, 0);
+  }
+}
